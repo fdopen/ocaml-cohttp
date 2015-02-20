@@ -69,7 +69,7 @@ let start_proxy port host verbose cert key () =
   Server.create ~mode config
 
 let lwt_start_proxy port host verbose cert key =
-  Lwt_main.run (start_proxy port host verbose cert key ())
+  Uwt.Main.run (start_proxy port host verbose cert key ())
 
 open Cmdliner
 

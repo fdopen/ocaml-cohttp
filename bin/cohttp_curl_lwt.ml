@@ -20,7 +20,7 @@ open Lwt
 open Cohttp
 open Cohttp_lwt_unix
 module D = Cohttp_lwt_unix_debug
-
+module Lwt_io = Uwt_io
 let debug f = if !D.debug_active then f D.debug_print else ()
 
 let client uri ofile =
@@ -49,7 +49,7 @@ let run_client verbose ofile uri =
     Cohttp_lwt_unix_debug.debug_active := true;
     debug (fun d -> d ">>> Debug active");
   );
-  Lwt_main.run (client uri ofile)
+  Uwt.Main.run (client uri ofile)
 
 open Cmdliner
 

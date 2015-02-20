@@ -15,7 +15,7 @@
  *
  *)
 
-
+module Lwt_io = Uwt_io
 module Request = Cohttp_lwt.Make_request(Cohttp_lwt_unix_io)
 module Response = Cohttp_lwt.Make_response(Cohttp_lwt_unix_io)
 

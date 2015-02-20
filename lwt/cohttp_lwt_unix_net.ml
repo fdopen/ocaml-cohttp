@@ -21,6 +21,7 @@
 open Lwt
 
 module IO = Cohttp_lwt_unix_io
+module Lwt_io = Uwt_io
 
 type 'a io = 'a Lwt.t
 type ic = Lwt_io.input_channel
