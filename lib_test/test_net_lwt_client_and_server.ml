@@ -118,7 +118,7 @@ let client () =
 
 let _ =
   (* Fork into a client and server *)
-  match Lwt_unix.fork () with
+  match Unix.fork () with
   |0 -> (* child / client *)
     Unix.sleep 2;
     Printf.eprintf "client is %d\n%!" (Unix.getpid ());

@@ -31,10 +31,10 @@ let make_server () =
     let src_info =
       match ch with
       | CLU.TCP {CLU.fd; ip; port} -> begin
-          match Lwt_unix.getpeername fd with
-          | Lwt_unix.ADDR_INET (ia,port) ->
+          match Uwt.Tcp.getpeername_exn fd |> Uwt.Compat.to_unix_sockaddr with
+          | Unix.ADDR_INET (ia,port) ->
               sprintf "%s:%d" (Ipaddr.to_string (Ipaddr_unix.of_inet_addr ia)) port
-          | Lwt_unix.ADDR_UNIX path -> sprintf "sock:%s" path
+          | Unix.ADDR_UNIX path -> sprintf "sock:%s" path
       end
      |_ -> "Non-TCP source" in
     Printf.printf "%s : %s from %s\n%!" (Uri.to_string uri)
@@ -80,7 +80,7 @@ let make_server () =
                 push_st None
               else
                 push_st (send_msg start_time time));
-              Lwt_unix.sleep 3.0
+              Uwt.Timer.sleep 3_000
               >>= respond
            in respond ()
          with exn -> return ()

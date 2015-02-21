@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: bb1c8f7d0bd9a630a7bd727b78c2b518)
+# DO NOT EDIT (digest: 446316f590fde9ad82270b2a83536df5)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -63,7 +63,7 @@ true: annot, bin_annot
 <lwt/*.ml{,i,y}>: pkg_unix
 <lwt/*.ml{,i,y}>: pkg_uri
 <lwt/*.ml{,i,y}>: pkg_uri.services
-<lwt/*.ml{,i,y}>: pkg_uwt
+<lwt/*.ml{,i,y}>: pkg_uwt.compat
 <lwt/*.ml{,i,y}>: use_cohttp
 <lwt/*.ml{,i,y}>: use_cohttp_lwt
 # Library cohttp_lwt_xhr
@@ -118,7 +118,7 @@ true: annot, bin_annot
 <lib_test/test_parser.{native,byte}>: pkg_unix
 <lib_test/test_parser.{native,byte}>: pkg_uri
 <lib_test/test_parser.{native,byte}>: pkg_uri.services
-<lib_test/test_parser.{native,byte}>: pkg_uwt
+<lib_test/test_parser.{native,byte}>: pkg_uwt.compat
 <lib_test/test_parser.{native,byte}>: use_cohttp
 <lib_test/test_parser.{native,byte}>: use_cohttp_lwt
 <lib_test/test_parser.{native,byte}>: use_cohttp_lwt_unix
@@ -182,7 +182,7 @@ true: annot, bin_annot
 <lib_test/test_net_lwt.{native,byte}>: pkg_unix
 <lib_test/test_net_lwt.{native,byte}>: pkg_uri
 <lib_test/test_net_lwt.{native,byte}>: pkg_uri.services
-<lib_test/test_net_lwt.{native,byte}>: pkg_uwt
+<lib_test/test_net_lwt.{native,byte}>: pkg_uwt.compat
 <lib_test/test_net_lwt.{native,byte}>: use_cohttp
 <lib_test/test_net_lwt.{native,byte}>: use_cohttp_lwt
 <lib_test/test_net_lwt.{native,byte}>: use_cohttp_lwt_unix
@@ -203,7 +203,7 @@ true: annot, bin_annot
 <lib_test/test_net_lwt_google.{native,byte}>: pkg_unix
 <lib_test/test_net_lwt_google.{native,byte}>: pkg_uri
 <lib_test/test_net_lwt_google.{native,byte}>: pkg_uri.services
-<lib_test/test_net_lwt_google.{native,byte}>: pkg_uwt
+<lib_test/test_net_lwt_google.{native,byte}>: pkg_uwt.compat
 <lib_test/test_net_lwt_google.{native,byte}>: use_cohttp
 <lib_test/test_net_lwt_google.{native,byte}>: use_cohttp_lwt
 <lib_test/test_net_lwt_google.{native,byte}>: use_cohttp_lwt_unix
@@ -224,7 +224,7 @@ true: annot, bin_annot
 <lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: pkg_unix
 <lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: pkg_uri
 <lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: pkg_uri.services
-<lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: pkg_uwt
+<lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: pkg_uwt.compat
 <lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: use_cohttp
 <lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: use_cohttp_lwt
 <lib_test/test_net_lwt_google_custom_ctx.{native,byte}>: use_cohttp_lwt_unix
@@ -245,7 +245,7 @@ true: annot, bin_annot
 <lib_test/test_net_lwt_lastminute.{native,byte}>: pkg_unix
 <lib_test/test_net_lwt_lastminute.{native,byte}>: pkg_uri
 <lib_test/test_net_lwt_lastminute.{native,byte}>: pkg_uri.services
-<lib_test/test_net_lwt_lastminute.{native,byte}>: pkg_uwt
+<lib_test/test_net_lwt_lastminute.{native,byte}>: pkg_uwt.compat
 <lib_test/test_net_lwt_lastminute.{native,byte}>: use_cohttp
 <lib_test/test_net_lwt_lastminute.{native,byte}>: use_cohttp_lwt
 <lib_test/test_net_lwt_lastminute.{native,byte}>: use_cohttp_lwt_unix
@@ -266,7 +266,7 @@ true: annot, bin_annot
 <lib_test/test_net_lwt_server.{native,byte}>: pkg_unix
 <lib_test/test_net_lwt_server.{native,byte}>: pkg_uri
 <lib_test/test_net_lwt_server.{native,byte}>: pkg_uri.services
-<lib_test/test_net_lwt_server.{native,byte}>: pkg_uwt
+<lib_test/test_net_lwt_server.{native,byte}>: pkg_uwt.compat
 <lib_test/test_net_lwt_server.{native,byte}>: use_cohttp
 <lib_test/test_net_lwt_server.{native,byte}>: use_cohttp_lwt
 <lib_test/test_net_lwt_server.{native,byte}>: use_cohttp_lwt_unix
@@ -287,7 +287,7 @@ true: annot, bin_annot
 <lib_test/test_net_lwt_multi_get.{native,byte}>: pkg_unix
 <lib_test/test_net_lwt_multi_get.{native,byte}>: pkg_uri
 <lib_test/test_net_lwt_multi_get.{native,byte}>: pkg_uri.services
-<lib_test/test_net_lwt_multi_get.{native,byte}>: pkg_uwt
+<lib_test/test_net_lwt_multi_get.{native,byte}>: pkg_uwt.compat
 <lib_test/test_net_lwt_multi_get.{native,byte}>: use_cohttp
 <lib_test/test_net_lwt_multi_get.{native,byte}>: use_cohttp_lwt
 <lib_test/test_net_lwt_multi_get.{native,byte}>: use_cohttp_lwt_unix
@@ -308,13 +308,13 @@ true: annot, bin_annot
 <lib_test/test_net_lwt_client_and_server.{native,byte}>: pkg_unix
 <lib_test/test_net_lwt_client_and_server.{native,byte}>: pkg_uri
 <lib_test/test_net_lwt_client_and_server.{native,byte}>: pkg_uri.services
-<lib_test/test_net_lwt_client_and_server.{native,byte}>: pkg_uwt
+<lib_test/test_net_lwt_client_and_server.{native,byte}>: pkg_uwt.compat
 <lib_test/test_net_lwt_client_and_server.{native,byte}>: use_cohttp
 <lib_test/test_net_lwt_client_and_server.{native,byte}>: use_cohttp_lwt
 <lib_test/test_net_lwt_client_and_server.{native,byte}>: use_cohttp_lwt_unix
 <lib_test/*.ml{,i,y}>: pkg_conduit.lwt-unix
 <lib_test/*.ml{,i,y}>: pkg_unix
-<lib_test/*.ml{,i,y}>: pkg_uwt
+<lib_test/*.ml{,i,y}>: pkg_uwt.compat
 <lib_test/*.ml{,i,y}>: use_cohttp_lwt_unix
 <lib_test/test_net_lwt_client_and_server.{native,byte}>: custom
 # Executable test_net_async
@@ -456,7 +456,7 @@ true: annot, bin_annot
 <bin/cohttp_server_lwt.{native,byte}>: pkg_unix
 <bin/cohttp_server_lwt.{native,byte}>: pkg_uri
 <bin/cohttp_server_lwt.{native,byte}>: pkg_uri.services
-<bin/cohttp_server_lwt.{native,byte}>: pkg_uwt
+<bin/cohttp_server_lwt.{native,byte}>: pkg_uwt.compat
 <bin/cohttp_server_lwt.{native,byte}>: use_cohttp
 <bin/cohttp_server_lwt.{native,byte}>: use_cohttp_lwt
 <bin/cohttp_server_lwt.{native,byte}>: use_cohttp_lwt_unix
@@ -478,7 +478,7 @@ true: annot, bin_annot
 <bin/cohttp_proxy_lwt.{native,byte}>: pkg_unix
 <bin/cohttp_proxy_lwt.{native,byte}>: pkg_uri
 <bin/cohttp_proxy_lwt.{native,byte}>: pkg_uri.services
-<bin/cohttp_proxy_lwt.{native,byte}>: pkg_uwt
+<bin/cohttp_proxy_lwt.{native,byte}>: pkg_uwt.compat
 <bin/cohttp_proxy_lwt.{native,byte}>: use_cohttp
 <bin/cohttp_proxy_lwt.{native,byte}>: use_cohttp_lwt
 <bin/cohttp_proxy_lwt.{native,byte}>: use_cohttp_lwt_unix
@@ -500,7 +500,7 @@ true: annot, bin_annot
 <bin/cohttp_curl_lwt.{native,byte}>: pkg_unix
 <bin/cohttp_curl_lwt.{native,byte}>: pkg_uri
 <bin/cohttp_curl_lwt.{native,byte}>: pkg_uri.services
-<bin/cohttp_curl_lwt.{native,byte}>: pkg_uwt
+<bin/cohttp_curl_lwt.{native,byte}>: pkg_uwt.compat
 <bin/cohttp_curl_lwt.{native,byte}>: use_cohttp
 <bin/cohttp_curl_lwt.{native,byte}>: use_cohttp_lwt
 <bin/cohttp_curl_lwt.{native,byte}>: use_cohttp_lwt_unix
@@ -520,7 +520,7 @@ true: annot, bin_annot
 <bin/*.ml{,i,y}>: pkg_unix
 <bin/*.ml{,i,y}>: pkg_uri
 <bin/*.ml{,i,y}>: pkg_uri.services
-<bin/*.ml{,i,y}>: pkg_uwt
+<bin/*.ml{,i,y}>: pkg_uwt.compat
 <bin/*.ml{,i,y}>: use_cohttp
 <bin/*.ml{,i,y}>: use_cohttp_lwt
 <bin/*.ml{,i,y}>: use_cohttp_lwt_unix
@@ -616,3 +616,5 @@ true: annot, bin_annot
 # OASIS_STOP
 true: principal, strict_sequence, debug, short_paths
 true: annot
+<lib_test/test_parser.ml{,i,y}>: open(Uwt_compat)
+<lib_test/*lwt*.ml{,i,y}>: open(Uwt_compat)

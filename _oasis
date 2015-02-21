@@ -71,8 +71,8 @@ Library cohttp_lwt_unix
   Path:          lwt
   Findlibname:   lwt
   FindlibParent: cohttp
-  BuildDepends:  cohttp.lwt-core, unix, uwt, conduit.lwt-unix (>= 0.7.0), magic-mime
-  XMETARequires: cohttp.lwt-core, unix, uwt, conduit.lwt-unix, magic-mime
+  BuildDepends:  cohttp.lwt-core, unix, uwt.compat, conduit.lwt-unix (>= 0.7.0), magic-mime
+  XMETARequires: cohttp.lwt-core, unix, uwt.compat, conduit.lwt-unix, magic-mime
   Modules:       Cohttp_lwt_unix_io, Cohttp_lwt_unix, Cohttp_lwt_unix_net, Cohttp_lwt_unix_debug
 
 Library cohttp_lwt_xhr
