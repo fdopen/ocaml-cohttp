@@ -16,7 +16,10 @@
  *)
 
 module CD = Cohttp_lwt_unix_debug
-let () = Sys.(set_signal sigpipe Signal_ignore)
+let () = match Sys.os_type with
+  | "Win32" -> ()
+  | _ -> Sys.(set_signal sigpipe Signal_ignore)
+
 module Lwt_io = Uwt_io
 
 type 'a t = 'a Lwt.t
